@@ -9,6 +9,14 @@ public class Valuta {
 	private GregorianCalendar datum;
 	private Kurs kurs;
 	
+	public Valuta(String naziv, String skraceniNaziv, GregorianCalendar datum, Kurs kurs) {
+		super();
+		this.naziv = naziv;
+		this.skraceniNaziv = skraceniNaziv;
+		this.datum = datum;
+		this.kurs = kurs;
+	}
+	
 	public String getNaziv() {
 		return naziv;
 	}
