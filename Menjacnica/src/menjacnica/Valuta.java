@@ -13,24 +13,32 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv == null || naziv.equals(""))
+			throw new RuntimeException("Greska pri unosu naziva valute!");
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if (skraceniNaziv == null || skraceniNaziv.equals(""))
+			throw new RuntimeException("Greska pri unosu skracenog naziva valute!");
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if (datum == null)
+			throw new RuntimeException("Greska pri unosu datuma!");
 		this.datum = datum;
 	}
 	public Kurs getKurs() {
 		return kurs;
 	}
 	public void setKurs(Kurs kurs) {
+		if (kurs == null)
+			throw new RuntimeException("Greska pri unosu kursa!");
 		this.kurs = kurs;
 	}
 	@Override

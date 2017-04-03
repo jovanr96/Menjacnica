@@ -11,6 +11,8 @@ public class Kurs {
 	}
 
 	public void setProdajniKurs(double prodajniKurs) {
+		if (prodajniKurs <= 0)
+			throw new RuntimeException("Doslo je do greske pri unosu prodajnog kursa!");
 		this.prodajniKurs = prodajniKurs;
 	}
 
@@ -19,6 +21,8 @@ public class Kurs {
 	}
 
 	public void setSrednjiKurs(double srednjiKurs) {
+		if (srednjiKurs <= 0)
+			throw new RuntimeException("Doslo je do greske pri unosu srednjeg kursa!");
 		this.srednjiKurs = srednjiKurs;
 	}
 
@@ -27,6 +31,8 @@ public class Kurs {
 	}
 
 	public void setKupovniKurs(double kupovniKurs) {
+		if (kupovniKurs <= 0)
+			throw new RuntimeException("Doslo je do greske pri unosu kupovnog kursa!");
 		this.kupovniKurs = kupovniKurs;
 	}
 
