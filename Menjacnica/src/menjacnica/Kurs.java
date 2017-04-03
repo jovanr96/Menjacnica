@@ -5,6 +5,15 @@ public class Kurs {
 	private double prodajniKurs;
 	private double srednjiKurs;
 	private double kupovniKurs;
+	
+	
+	
+	public Kurs(double prodajniKurs, double srednjiKurs, double kupovniKurs) {
+		super();
+		this.prodajniKurs = prodajniKurs;
+		this.srednjiKurs = srednjiKurs;
+		this.kupovniKurs = kupovniKurs;
+	}
 
 	public double getProdajniKurs() {
 		return prodajniKurs;
