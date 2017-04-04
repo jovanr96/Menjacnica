@@ -20,6 +20,8 @@ public class Menjacnica implements Metode {
 
 	@Override
 	public void brisanjeKursaValuteZaOdredjeniDatum(String naziv, GregorianCalendar datum) {
+		if(valute.isEmpty())
+			return;
 		for (int i = 0; i < valute.size(); i++)
 			if (valute.get(i).getNaziv().equals(naziv) && valute.get(i).getDatum().equals(datum))
 				valute.remove(i);
@@ -28,6 +30,8 @@ public class Menjacnica implements Metode {
 
 	@Override
 	public Kurs pronalazenjeKursaValuteZaOdredjeniDan(String naziv, String skraceniNaziv, GregorianCalendar datum) {
+		if (valute.isEmpty())
+			return null;
 		for (int i = 0; i < valute.size(); i++)
 			if (valute.get(i).getNaziv().equals(naziv) && 
 					valute.get(i).getSkraceniNaziv().equals(skraceniNaziv)
