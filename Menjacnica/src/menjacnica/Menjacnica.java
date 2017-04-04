@@ -1,15 +1,21 @@
 package menjacnica;
 
 import java.util.GregorianCalendar;
+import java.util.LinkedList;
 
 import metode.Metode;
 
 public class Menjacnica implements Metode {
 
+	LinkedList<Valuta> valute = new LinkedList<Valuta>();
+
 	@Override
 	public void dodavanjeKursaValute(String naziv, String skraceniNaziv, GregorianCalendar datum, double kupovniKurs,
 			double prodajniKurs, double srednjiKurs) {
-		// TODO Auto-generated method stub
+
+		Kurs k = new Kurs(prodajniKurs, srednjiKurs, kupovniKurs);
+		Valuta v = new Valuta(naziv, skraceniNaziv, datum, k);
+		valute.addFirst(v);
 
 	}
 
